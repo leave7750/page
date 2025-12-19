@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Magic Christmas Tree</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #000; }
+        canvas { display: block; }
+        @keyframes bubbleFloat {
+            0% { opacity: 0; transform: translateY(40px) scale(0.6); }
+            15% { opacity: 1; transform: translateY(0) scale(1.05); }
+            100% { opacity: 0; transform: translateY(-100px) scale(0.9); }
+        }
+        .bubble-message {
+            animation: bubbleFloat ease-in-out forwards;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "three/": "https://esm.sh/three@^0.182.0/",
+    "three": "https://esm.sh/three@^0.182.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-black text-white overflow-hidden select-none touch-none">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
